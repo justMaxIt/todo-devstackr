@@ -7,7 +7,7 @@
 <div class="container">
    <div class="add-todo-box">
 
-      <form>
+      <form #form="ngForm">
          <h2 class="title is-5">New Todo</h2>
 
          <div class="field is-grouped">
@@ -31,15 +31,13 @@
 
       <div class="todos-list">
 
-         <div class="todo-item completed">
+         <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
             <div class="check-box">
                <i class="material-icons">check</i>
             </div>
 
             <div class="todo-text">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab autem aliquam iure excepturi expedita
-               exercitationem porro adipisci ea quaerat a necessitatibus labore qui, veritatis modi commodi provident
-               omnis eveniet? Fugiat?
+               {{todo.text}}
             </div>
 
             <div class="todo-controls-box">
@@ -54,7 +52,7 @@
 
          </div>
 
-         <div class="todo-item">
+         <!-- <div class="todo-item">
             <div class="check-box">
                <i class="material-icons">check</i>
             </div>
@@ -72,8 +70,7 @@
                   <i class="material-icons">delete</i>
                </div>
             </div>
-
-         </div>
+         </div> -->
 
       </div>
    </div>
