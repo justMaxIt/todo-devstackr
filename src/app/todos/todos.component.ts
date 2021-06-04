@@ -11,6 +11,7 @@ import { Todo } from './shared/todo.model';
 export class TodosComponent implements OnInit {
 
   todos: Todo[] = [{ text: '', completed: false }]
+  showValidationErrors: boolean = false
 
   constructor(private dataService: DataService) { }
 
@@ -18,13 +19,13 @@ export class TodosComponent implements OnInit {
     this.todos = this.dataService.getAllTodos()
   }
 
-  onFormSubmit(form: NgForm) {
-    if (form.invalid) return alert("Form is invalid!")
-    console.log(form);
+  onFormSubmit(form: NgForm): any {
+    if (form.invalid) return this.showValidationErrors = true
 
     this.dataService.addTodo(new Todo(form.value.text))
 
-
+    this.showValidationErrors = false
+    form.reset()
   }
 
 }

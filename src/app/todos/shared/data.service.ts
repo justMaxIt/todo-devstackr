@@ -8,7 +8,7 @@ export class DataService {
 
   todos: Todo[] = [
     new Todo('This is test', true),
-    new Todo('Lorem vfdvergvdxg bg ge geg ege eet4etytjhgnh  rhtrth rt'),
+    new Todo('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quidem, temporibus repellat ipsa nobis dolor, aspernatur ratione ex itaque sed odit aliquid earum voluptas quam enim impedit libero veritatis autem.'),
 
   ]
 
