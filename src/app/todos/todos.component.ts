@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { DataService } from './shared/data.service';
-import { Todo } from './shared/todo.model';
+import { DataService } from '../../shared/data.service';
+import { Todo } from '../../shared/todo.model';
 
 @Component({
   selector: 'app-todos',
@@ -27,5 +27,17 @@ export class TodosComponent implements OnInit {
     this.showValidationErrors = false
     form.reset()
   }
+
+  toggleCompleted(todo: Todo) {
+    todo.completed = !todo.completed
+  }
+
+  editTodo(todo: Todo) {
+    const index = this.todos.indexOf(todo)
+
+    // this.dataService.updateTodo(todo)
+
+  }
+
 
 }

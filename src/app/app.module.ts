@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
