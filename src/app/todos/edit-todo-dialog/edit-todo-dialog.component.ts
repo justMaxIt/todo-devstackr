@@ -10,6 +10,7 @@ import { Todo } from 'src/shared/todo.model';
 })
 export class EditTodoDialogComponent implements OnInit {
 
+
   constructor(public dialogRef: MatDialogRef<EditTodoDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public todo: Todo) { }
 
@@ -21,6 +22,7 @@ export class EditTodoDialogComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm) {
+    if (form.invalid) return
     const updatedTodo = {
       ...this.todo,
       ...form.value
