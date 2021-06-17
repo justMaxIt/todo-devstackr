@@ -15,12 +15,10 @@ export class TodoItemComponent implements OnInit {
   @Output() editClicked: EventEmitter<void> = new EventEmitter()
   @Output() deleteClicked: EventEmitter<void> = new EventEmitter()
 
-  test: string = "Default"
-
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(() => { this.test = "New setTimeout" }, 2500)
+
   }
 
   onTodoClicked() {

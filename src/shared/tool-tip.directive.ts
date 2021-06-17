@@ -8,7 +8,7 @@ export class ToolTipDirective implements AfterViewInit, OnChanges {
 
   @Input('appToolTip') tooltipContent!: string
 
-  tippyInstance: any = ''
+  public tippyInstance: any = ''
 
   constructor(private elRef: ElementRef) { }
 

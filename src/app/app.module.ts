@@ -11,7 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditTodoDialogComponent } from './todos/edit-todo-dialog/edit-todo-dialog.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { ToolTipDirective } from '../shared/tool-tip.directive'
+import { ToolTipDirective } from '../shared/tool-tip.directive';
+import { ToolTipSingletonDirective } from '../shared/tool-tip-singleton.directive'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ToolTipDirective } from '../shared/tool-tip.directive'
     TodosComponent,
     TodoItemComponent,
     EditTodoDialogComponent,
-    ToolTipDirective
+    ToolTipDirective,
+    ToolTipSingletonDirective
   ],
   imports: [
     BrowserModule,
